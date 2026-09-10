@@ -6,11 +6,11 @@
     <title>Lodi646 Official Security & Verification Portal</title>
     <meta name="description" content="Official security verification portal for Lodi646, lode646, and lodi456. Ensure secure access, access canonical domain routing, and verify real-time platform status.">
     
-    <!-- 动态 Canonical 标签逻辑：GitHub 指向主站，Vercel 指向自己 -->
+    <!-- 动态 Canonical 标签逻辑：GitHub 指向主站，Vercel/Cloudflare 指向自己 -->
     <script>
       (function() {
         var canonicalUrl;
-        if (window.location.hostname.includes('vercel.app')) {
+        if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('pages.dev')) {
           canonicalUrl = window.location.protocol + '//' + window.location.hostname + window.location.pathname;
         } else {
           canonicalUrl = 'https://lodi646app.ph';
@@ -134,6 +134,32 @@
         .btn:hover {
             background-color: #1d4ed8;
         }
+        .faq-section {
+            margin-top: 28px;
+            text-align: left;
+            border-top: 1px solid #334155;
+            padding-top: 20px;
+        }
+        .faq-section h2 {
+            font-size: 1.05rem;
+            color: #f1f5f9;
+            margin-bottom: 12px;
+        }
+        .faq-item {
+            margin-bottom: 14px;
+        }
+        .faq-item h3 {
+            font-size: 0.9rem;
+            color: #38bdf8;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        .faq-item p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
         .footer-note {
             margin-top: 24px;
             font-size: 0.8rem;
@@ -154,6 +180,27 @@
         </div>
 
         <a href="https://lodi646app.ph" class="btn" rel="noopener">Access Official Website</a>
+
+        <!-- Taglish FAQ：精准拦截菲律宾本地错别字与防伪意图 -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-item">
+                <h3>Q: Bakit may search results para sa lode646 o lodi456?</h3>
+                <p>A: Ang lode646 at lodi456 ay mga common misspelling variations. Para makaiwas sa fake o phishing sites, ginawa ang official security node na ito para i-direct kayo sa legit portal.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q: Paano makakasiguro na safe ang Lodi646 login access?</h3>
+                <p>A: Laging i-check ang URL bar at siguraduhing <strong>lodi646app.ph</strong> ang nakalagay. Huwag mag-click sa mga kaduda-dudang search ads o unofficial alternative links.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q: Ligtas ba i-download ang official Lodi646 app?</h3>
+                <p>A: Yes, guaranteed safe ang official app installation basta nanggaling sa verified SSL endpoints ng aming main system node.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q: Ano ang gagawin kung humihingi ng info ang unverified mirror site?</h3>
+                <p>A: I-close agad ang page at huwag magbigay ng credentials. Ang legit platform ay hindi ka ire-redirect sa mga unencrypted third-party sites.</p>
+            </div>
+        </div>
 
         <div class="footer-note">
             Protected by Lodi646 Security Matrix. Official Security Node Verification.
