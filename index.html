@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lodi646 Official Security & Verification Portal</title>
-    <meta name="description" content="Official security verification portal for Lodi646. Ensure secure access, access canonical domain routing, and verify real-time platform status.">
-    <link rel="canonical" href="https://dev-tommy-tech.github.io/security-portal/" />
+    <meta name="description" content="Official security verification portal for Lodi646, lode646, and lodi456. Ensure secure access, access canonical domain routing, and verify real-time platform status.">
+    
+    <!-- 动态 Canonical 标签逻辑：GitHub 指向主站，Vercel 指向自己 -->
+    <script>
+      (function() {
+        var canonicalUrl;
+        if (window.location.hostname.includes('vercel.app')) {
+          canonicalUrl = window.location.protocol + '//' + window.location.hostname + window.location.pathname;
+        } else {
+          canonicalUrl = 'https://lodi646app.ph';
+        }
+        var link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = canonicalUrl;
+        document.getElementsByTagName('head')[0].appendChild(link);
+      })();
+    </script>
     
     <!-- Open Graph Metadata -->
     <meta property="og:title" content="Lodi646 Official Security Portal">
-    <meta property="og:description" content="Verified security directory and official access point for Lodi646.">
+    <meta property="og:description" content="Verified security directory and official access point for Lodi646, lode646, and lodi456.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dev-tommy-tech.github.io/security-portal/">
+    <meta property="og:url" content="https://lodi646app.ph">
     
     <!-- JSON-LD Structured Data (Schema Markup) -->
     <script type="application/ld+json">
@@ -19,16 +34,16 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Lodi646 Security Hub",
-      "url": "https://dev-tommy-tech.github.io/security-portal/",
-      "description": "Official security portal providing safe redirection and domain verification for Lodi646.",
+      "url": "https://lodi646app.ph",
+      "description": "Official security portal providing safe redirection and domain verification for Lodi646, lode646, and lodi456.",
       "publisher": {
         "@type": "Organization",
         "name": "Lodi646 Platform"
       },
       "mainEntity": {
         "@type": "WebPage",
-        "@id": "https://dev-tommy-tech.github.io/security-portal/#webpage",
-        "url": "https://dev-tommy-tech.github.io/security-portal/",
+        "@id": "https://lodi646app.ph/#webpage",
+        "url": "https://lodi646app.ph",
         "name": "Security Center",
         "isPartOf": {
           "@type": "WebSite",
@@ -131,7 +146,7 @@
     <div class="container">
         <div class="badge">✓ Verified Official Gateway</div>
         <h1>Lodi646 Security & Verification Gateway</h1>
-        <p>This GitHub Pages node provides authenticated routing and security verification for official Lodi646 platform services. Always verify domain authenticity before accessing account credentials.</p>
+        <p>This authenticated node provides official domain routing and security verification for Lodi646, lode646, and lodi456 access points. Always verify domain authenticity before entering account credentials.</p>
         
         <div class="verify-box">
             <span>CANONICAL PLATFORM DOMAIN</span>
@@ -141,7 +156,7 @@
         <a href="https://lodi646app.ph" class="btn" rel="noopener">Access Official Website</a>
 
         <div class="footer-note">
-            Protected by Lodi646 Security Matrix. Official GitHub Node Verification.
+            Protected by Lodi646 Security Matrix. Official Security Node Verification.
         </div>
     </div>
 
