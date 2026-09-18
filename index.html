@@ -6,19 +6,43 @@
     <title>Lodi646 Official Security & Verification Portal</title>
     <meta name="description" content="Official security verification portal for Lodi646, lode646, and lodi456. Ensure secure access, access canonical domain routing, and verify real-time platform status.">
     
-    <!-- 动态 Canonical 标签逻辑：GitHub 指向主站，Vercel/Cloudflare 指向自己 -->
+    <!-- 动态 Canonical 与多节点差异化注入引擎 -->
     <script>
       (function() {
-        var canonicalUrl;
-        if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('pages.dev')) {
-          canonicalUrl = window.location.protocol + '//' + window.location.hostname + window.location.pathname;
+        var hostname = window.location.hostname;
+        var canonicalUrl, platformName, nodeCode, extraDesc;
+
+        // 针对不同平台分发不同的收录定位、Canonical 与特征码
+        if (hostname.includes('vercel.app')) {
+          canonicalUrl = window.location.protocol + '//' + hostname + window.location.pathname;
+          platformName = 'Vercel Edge Security Node';
+          nodeCode = 'PH-V-02 (Mobile-Optimized)';
+          extraDesc = 'Optimized for Globe/Smart mobile browser routing and low-latency access.';
+        } else if (hostname.includes('pages.dev')) {
+          canonicalUrl = window.location.protocol + '//' + hostname + window.location.pathname;
+          platformName = 'Cloudflare Protected Gateway';
+          nodeCode = 'PH-C-05 (Cloudflare Secured)';
+          extraDesc = 'Protected by Cloudflare Southeast Asia DDoS defense and SSL matrix.';
         } else {
           canonicalUrl = 'https://lodi646app.ph';
+          platformName = 'Main System Hub';
+          nodeCode = 'PH-M-01 (Primary)';
+          extraDesc = 'Primary system core node for global directory routing.';
         }
+
+        // 动态注入 Canonical
         var link = document.createElement('link');
         link.rel = 'canonical';
         link.href = canonicalUrl;
         document.getElementsByTagName('head')[0].appendChild(link);
+
+        // 页面加载完成后动态微调部分文案，制造搜索引擎可见的“合理差异”
+        window.addEventListener('DOMContentLoaded', function() {
+          var footerNote = document.querySelector('.footer-note');
+          if (footerNote) {
+            footerNote.innerHTML += '<br><span style="color: #38bdf8; font-size: 0.75rem;">Node: ' + nodeCode + ' | ' + extraDesc + '</span>';
+          }
+        });
       })();
     </script>
     
